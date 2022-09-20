@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(fileUpload({}));
 
+app.use('/ping', (req, res) => res.json('PONG'));
 app.use('/auth', authRouter);
 app.use('/cars', carRouter);
 app.use('/users', userRouter);
